@@ -1,0 +1,815 @@
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #777;
+}
+
+a {
+  text-decoration: none;
+  color: #aaaaaa;
+}
+
+a:hover {
+  color: #c8fff8;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.font-primary {
+  font-family: "Lato", sans-serif;
+}
+
+/*--------------------------------------------------------------
+# Sections General
+--------------------------------------------------------------*/
+section {
+  padding: 60px 0;
+}
+
+.section-bg {
+  background-color: #f2f2f2;
+}
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  color: #555;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 99999;
+  background: #000000;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 24px;
+  color: #fff;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #6b6b6b;
+  color: #fff;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  height: 80px;
+  z-index: 997;
+  transition: all 0.5s;
+  background: #1c1c1c;
+}
+
+#header.header-scrolled {
+  background: #000000;
+  height: 60px;
+}
+
+#header .logo h1 {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+#header .logo h1 a,
+#header .logo h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+  line-height: 0;
+}
+
+#header .logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 40px;
+}
+
+#main {
+  margin-top: 80px;
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+  padding: 0;
+}
+
+.navbar ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0 10px 30px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #d2ece9;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+  font-size: 12px;
+  line-height: 0;
+  margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: #fff;
+}
+
+
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+  color: #fff;
+  font-size: 28px;
+  cursor: pointer;
+  display: none;
+  line-height: 0;
+  transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+
+  .navbar ul {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(19, 19, 19, 0.9);
+  transition: 0.3s;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.navbar-mobile ul {
+  display: block;
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  padding: 10px 0;
+  background-color: #fff;
+  overflow-y: auto;
+  transition: 0.3s;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+  padding: 10px 20px;
+  font-size: 15px;
+  color: #141414;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+  color: #000000;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+  margin: 15px;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+#hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../img/hero-background.jpg") top center;
+  background-size: cover;
+  position: relative;
+  margin-bottom: -80px;
+}
+
+#hero:before {
+  content: "";
+  background: rgba(22, 34, 28, 0.624);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  padding-top: 80px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+#hero h1 {
+  margin: 0 0 10px 0;
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 56px;
+  color: #fff;
+}
+
+#hero h2 {
+  color: #eee;
+  margin-bottom: 50px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+#hero .btn-get-started {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px 10px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+#hero .btn-get-started:hover {
+  background: rgb(255, 255, 255)000;
+  color: #000000;
+  border: 1px solid #565656;
+}
+
+@media (min-width: 1024px) {
+  #hero {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+}
+
+/*--------------------------------------------------------------
+# About Us
+--------------------------------------------------------------*/
+.about h3 {
+  font-weight: 400;
+  font-size: 26px;
+}
+
+.about p:last-child {
+  margin-bottom: 0;
+}
+
+
+/*--------------------------------------------------------------
+# Culture
+--------------------------------------------------------------*/
+
+
+.culture {
+  padding: 60px 0;
+}
+
+.culture #culture-flters {
+  padding: 0;
+  margin: 0 0 35px 0;
+  list-style: none;
+  text-align: center;
+}
+
+.culture .culture-wrap {
+  background: #000000;
+  overflow: hidden;
+  min-height: 200px;
+  position: relative;
+  border-radius: 4px;
+  margin: 0 0 30px 0;
+}
+
+.culture .culture-wrap img {
+  transition: all 0.3s ease-in-out;
+}
+
+.culture .culture-wrap .culture-info {
+  opacity: 0;
+  position: absolute;
+  transition: all 0.3s linear;
+  text-align: center;
+  top: 10%;
+  left: 0;
+  right: 0;
+}
+
+.culture .culture-wrap .culture-info h3 {
+  font-size: 22px;
+}
+
+.culture .culture-wrap .culture-info h3 a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.culture .culture-wrap:hover img {
+  opacity: 0.4;
+  transform: scale(1.1);
+}
+
+.culture .culture-wrap:hover .culture-info {
+  opacity: 1;
+  top: calc(50% - 30px);
+}
+
+
+/*--------------------------------------------------------------
+# cardsall-title
+--------------------------------------------------------------*/
+
+
+.cardsall-t .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.cardsall-t .title a {
+  color: #343a40;
+  transition: 0.3s;
+}
+
+.cardsall-t .description {
+  line-height: 24px;
+  font-size: 14px;
+}
+
+/*--------------------------------------------------------------
+# Call To Action
+--------------------------------------------------------------*/
+.l-explore {
+  background: linear-gradient(rgba(0, 0, 0, 0.742), rgba(52, 52, 52, 0.502)), url("../img/call-to-action-bg.jpg") fixed center center;
+  background-size: cover;
+  padding: 60px 0;
+}
+
+.l-explore h3 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.l-explore p {
+  color: #fff;
+}
+
+
+/*--------------------------------------------------------------
+# cardsall
+--------------------------------------------------------------*/
+
+
+.cardsall {
+  padding: 20px 0;
+}
+
+.cardsall #cardsall-flters {
+  padding: 0;
+  margin: 0 0 35px 0;
+  list-style: none;
+  text-align: center;
+}
+
+.cardsall #cardsall-flters li {
+  cursor: pointer;
+  margin: 0 15px 15px 0;
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #777;
+  border-radius: 4px;
+  text-transform: uppercase;
+  background: white;
+  margin-bottom: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.cardsall #cardsall-flters li:hover,
+.cardsall #cardsall-flters li.filter-active {
+  background: #232323;
+  color: #fff;
+}
+
+.cardsall #cardsall-flters li:last-child {
+  margin-right: 0;
+}
+
+.cardsall .cardsall-wrap {
+  background: #000000;
+  overflow: hidden;
+  min-height: 200px;
+  position: relative;
+  border-radius: 4px;
+  margin: 0 0 30px 0;
+}
+
+.cardsall .cardsall-wrap img {
+  transition: all 0.3s ease-in-out;
+}
+
+.cardsall .cardsall-wrap .cardsall-info {
+  opacity: 0;
+  position: absolute;
+  transition: all 0.3s linear;
+  text-align: center;
+  top: 10%;
+  left: 0;
+  right: 0;
+}
+
+.cardsall .cardsall-wrap .cardsall-info h3 {
+  font-size: 22px;
+}
+
+.cardsall .cardsall-wrap .cardsall-info h3 a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.cardsall .cardsall-wrap .cardsall-info a i {
+  color: #fff;
+  font-size: 24px;
+  transition: 0.3s;
+  margin: 4px;
+}
+
+.cardsall .cardsall-wrap .cardsall-info a i:hover {
+  color: #70b9b0;
+}
+
+.cardsall .cardsall-wrap:hover img {
+  opacity: 0.4;
+  transform: scale(1.1);
+}
+
+.cardsall .cardsall-wrap:hover .cardsall-info {
+  opacity: 1;
+  top: calc(50% - 30px);
+}
+
+
+/*--------------------------------------------------------------
+# Cuisine&Expirience
+--------------------------------------------------------------*/
+.ce {
+  background: linear-gradient(rgba(0, 0, 0, 0.742), rgba(0, 0, 0, 0.502)), url("../img/ce-bg.jpg") fixed center center;
+  background-size: cover;
+  padding: 60px 0;
+}
+
+.ce h3 {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+
+
+/*--------------------------------------------------------------
+# Local Cuisine & Experiences
+--------------------------------------------------------------*/
+.Experiences .sub {
+  text-align: center;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  background: #fff;
+}
+
+.Experiences .sub img {
+  max-width: 60%;
+  border-radius: 50%;
+  margin: 0 0 30px 0;
+}
+
+.Experiences .sub h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+}
+
+.Experiences .sub span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+}
+
+.Experiences .sub p {
+  padding-top: 10px;
+  font-size: 14px;
+  font-style: italic;
+  color: #aaaaaa;
+}
+
+/*--------------------------------------------------------------
+# Frequently Asked Questions
+--------------------------------------------------------------*/
+.faq {
+  padding: 60px 0;
+}
+
+.faq .faq-list {
+  padding: 0;
+  list-style: none;
+}
+
+.faq .faq-list li {
+  border-bottom: 1px solid #deefed;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.faq .faq-list .question {
+  display: block;
+  position: relative;
+  font-family: "Lato", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 400;
+  padding-left: 25px;
+  cursor: pointer;
+  color: #262626;
+  transition: 0.3s;
+}
+
+.faq .faq-list i {
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+.faq .faq-list p {
+  margin-bottom: 0;
+  padding: 10px 0 0 25px;
+}
+
+.faq .faq-list .icon-show {
+  display: none;
+}
+
+.faq .faq-list .collapsed {
+  color: #343a40;
+}
+
+.faq .faq-list .collapsed:hover {
+  color: #222222;
+}
+
+.faq .faq-list .collapsed .icon-show {
+  display: inline-block;
+  transition: 0.6s;
+}
+
+.faq .faq-list .collapsed .icon-close {
+  display: none;
+  transition: 0.6s;
+}
+
+/*--------------------------------------------------------------
+# map
+--------------------------------------------------------------*/
+.map .icon-box {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.map .icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.map .icon i {
+  color: #222222;
+  font-size: 42px;
+}
+
+.map .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.map .title a {
+  color: #343a40;
+  transition: 0.3s;
+}
+
+.map .icon-box:hover .title a {
+  color: #303030;
+}
+
+.map .description {
+  line-height: 24px;
+  font-size: 14px;
+}
+/*--------------------------------------------------------------
+# Contact Us
+--------------------------------------------------------------*/
+.contact .contact-about h3 {
+  font-size: 36px;
+  margin: 0 0 10px 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: #000000;
+}
+
+.contact .contact-about p {
+  font-size: 14px;
+  line-height: 24px;
+  font-family: "Lato", sans-serif;
+  color: #888;
+}
+
+.contact .social-links {
+  padding-bottom: 20px;
+}
+
+.contact .social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  background: #fff;
+  color: #000000;
+  line-height: 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+  border: 1px solid #262626;
+}
+
+.contact .social-links a:hover {
+  background: #202020;
+  color: #fff;
+}
+
+.contact .info {
+  color: #777;
+}
+
+.contact .info i {
+  font-size: 32px;
+  color: #323232;
+  float: left;
+  line-height: 1;
+}
+
+.contact .info p {
+  padding: 0 0 10px 42px;
+  line-height: 28px;
+  font-size: 14px;
+}
+.btn-feedback {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px 10px 28px;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: 1px solid #000000;
+  color: #000000;
+  margin-top: 8px;
+}
+.btn-feedback:hover {
+  background: rgb(0, 0, 0)000;
+  color: #ffffff;
+  border: 1px solid #565656;
+}
+/*--------------------------------------------------------------
+# Map
+--------------------------------------------------------------*/
+.map {
+  padding: 0;
+  margin-bottom: -10px;
+}
+
+.map iframe {
+  width: 100%;
+  height: 380px;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #000000;
+  padding: 30px 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+#footer .copyright {
+  text-align: center;
+}
+
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+}
